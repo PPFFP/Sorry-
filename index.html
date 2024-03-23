@@ -1,29 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>عفوًا</title>
+<title>عذرًا</title>
 <style>
   body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     text-align: center;
+    direction: rtl; /* للكتابة من اليمين إلى اليسار */
   }
   
-  .heart-container {
-    margin-top: 50px;
-    position: relative;
-    display: inline-block;
-  }
-
   .heart {
     width: 100px;
     height: 90px;
     background-color: red;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    margin: 50px auto;
     transform: rotate(-45deg);
     border-radius: 50%;
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
@@ -51,7 +45,7 @@
 
   .text {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 24px;
@@ -61,9 +55,14 @@
 </style>
 </head>
 <body>
-  <div class="heart-container">
-    <div class="heart"></div>
-    <div class="text"> اني اسف عمري</div>
-  </div>
+  <div class="heart"></div>
+  <div class="text" id="apology">آسف</div>
+
+  <script>
+    // تغيير النص عند تحميل الصفحة
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("apology").textContent = "آسف";
+    });
+  </script>
 </body>
 </html>
